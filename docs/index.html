@@ -1,1 +1,26 @@
-
+<!DOCTYPE html>
+<html>
+    <body>
+      <h1>Titanic Survival Classifier Prediction Improvement</h1>
+      <h2>Steps taken to improve model precision/accuracy/AUC:
+<br>
+1) Included the following features by creating dummies in pandas,
+        [ 'female', 'male', 'Cabin Class 1',
+       'Cabin Class 2', 'Cabin Class 3', 'Cherbourg', 'Queenstown',
+       'Southampton', 'sib0', 'sib1', 'sib2', 'sib3', 'sib4', 'sib5',
+      'Age_1_20', 'Age_20_28', 'Age_28_38', 'Age_38_80', 
+        'Mr.', 'Mrs.', 'Miss', 'VIP']
+<br>
+2) Over sampling for the output values of 0 to create balanced dataset.
+<br>
+3) Tried the models ['naive bayes', 'logistic regression', 'k-nearest neighbors', 'random forest','svc','xgboost','decision tree','ksvm','Bagging classifier','gradient boost','adaboost','ridge classifier','extra tree ensemble']
+<br>
+Bagging classifier of decision tree gave the highest accuracy 81.7 (ROC curve 0.812, Precision of 0.829)</p>
+<iframe src="model_comp.png" width="100%" height="500" style="border:1px solid black;">  </iframe>
+<iframe src="model_comp_num.png" width="100%" height="500" style="border:1px solid black;">  </iframe>
+<iframe src="model_perf.png" width="100%" height="500" style="border:1px solid black;">  </iframe>
+<iframe src="model_perf_num.png" width="100%" height="500" style="border:1px solid black;">  </iframe>
+<iframe src="feature_imp.png" width="100%" height="500" style="border:1px solid black;">  </iframe>
+<a href="https://github.com/Malathy-Muthu/505-titanic-survival-classifier">Code on Github</a>
+      </body>
+</html>
